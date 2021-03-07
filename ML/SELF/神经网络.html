@@ -1,0 +1,367 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta content="text/css" http-equiv="Content-Style-Type">
+<title>神经网络</title>
+</head>
+<body>
+<h1 align="center" class="root">
+<a name="71kgb00qff9fht8dph6sf0attf">神经网络</a>
+</h1>
+<h2 class="topic">
+<a name="1t2bj6tmnkpbim3u0ar3rm2lfa">基本成分</a>
+</h2>
+<h3 class="topic">
+<a name="1d90u3j3s965vbvs57lvs1aoh1">&nbsp;神经元模型</a>
+</h3>
+<h3 class="topic">
+<a name="4eclf203jq20irjcste0efkbcr">&nbsp;&nbsp;流程</a>
+</h3>
+<h3 class="topic">
+<a name="49orkl46n3f5au6itrdn4hm4ov">&nbsp;&nbsp;&nbsp;接受其他神经元信号</a>
+</h3>
+<h3 class="topic">
+<a name="24b7ohii6gqtcd9lgnqmn7iu2p">&nbsp;&nbsp;&nbsp;信号通过带权重的链接进行传递</a>
+</h3>
+<h3 class="topic">
+<a name="4rnsa83koiq0bja16064ndltuq">&nbsp;&nbsp;&nbsp;总输入值与阈值比较，通过激活函数产生神经元输出</a>
+</h3>
+<h3 class="topic">
+<a name="27tr96fpt2hee6p59cn5hb9qbf">&nbsp;&nbsp;&nbsp;&nbsp;激活函数</a>
+</h3>
+<h3 class="topic">
+<a name="60aui7as2tu2c5uqh3pet1ljf5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作用</a>
+</h3>
+<h3 class="topic">
+<a name="2hdm2ttbt0u5j34vkq8hhp0ipp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;增加神经网络模型的非线性</a>
+</h3>
+<h3 class="topic">
+<a name="2n19i8hah4198k9pnl6a8bc6sv">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;类型</a>
+</h3>
+<h3 class="topic">
+<a name="38hd2bjs259625jucm0idv85i8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sigmoid函数</a>
+</h3>
+<h3 class="topic">
+<a name="7qqtvn2uu4t7m2dilop86mtdvu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</a>
+</h3>
+<h2 class="topic">
+<a name="1b5nuepc44r2l4inf1mq5q2d89">定义</a>
+</h2>
+<h3 class="topic">
+<a name="1saf6dhes07j3j5ohq9ltj42ss">&nbsp;具有适应性简单单元组成的广泛交互并行互相连接的网络</a>
+</h3>
+<h3 class="topic">
+<a name="40jus8d8odnmjsrjruv3n1ofpq">&nbsp;能够模拟生物神经系统对真实世界物体做出的交互反应</a>
+</h3>
+<h2 class="topic">
+<a name="1sden232ol77cpap7ct6el3cr5">感知机</a>
+</h2>
+<h3 class="topic">
+<a name="29925n15d89lgg87sladt69ddk">&nbsp;组成</a>
+</h3>
+<h3 class="topic">
+<a name="6m98tie259hur36rgcf2h53033">&nbsp;&nbsp;输入层</a>
+</h3>
+<h3 class="topic">
+<a name="48pp0ir45icalofnr2k7fhieaf">&nbsp;&nbsp;输出层</a>
+</h3>
+<h3 class="topic">
+<a name="377urcd646tno9n69vp4kt2o0g">&nbsp;&nbsp;&nbsp;M-P神经元</a>
+</h3>
+<h3 class="topic">
+<a name="6kuhk06d3uebrl3cgb9cjjq3jp">&nbsp;功能</a>
+</h3>
+<h3 class="topic">
+<a name="5q8u3dmgdmk8qiikhksnqleh7j">&nbsp;&nbsp;实现与非或运算</a>
+</h3>
+<h3 class="topic">
+<a name="6ubrf2ive8b379ss9pbss1l74m">&nbsp;算法</a>
+</h3>
+<h3 class="topic">
+<a name="6lpqklvag5darsh0au9cuuqcis">&nbsp;&nbsp;阈值看做固定输入的哑结点</a>
+</h3>
+<h3 class="topic">
+<a name="3secvs4oin36u8gr5dme3qu2q4">&nbsp;&nbsp;学习权重</a>
+</h3>
+<h3 class="topic">
+<a name="4ad77hshel45mnqieiovhojj8u">&nbsp;特点</a>
+</h3>
+<h3 class="topic">
+<a name="0kdtrndo2i9g8q03p3ci6d5pgl">&nbsp;&nbsp;只有输出层进行激活函数处理</a>
+</h3>
+<h3 class="topic">
+<a name="52b2tsrcp9roia3dri4p2bmtd6">&nbsp;&nbsp;只能解决分类线性可分的模式</a>
+</h3>
+<h2 class="topic">
+<a name="02hssja56pqjjunkvtc0n5jskq">多层前馈神经网络</a>
+</h2>
+<h3 class="topic">
+<a name="3vohcs6kv50n4fbql6r68p4u6e">&nbsp;组成</a>
+</h3>
+<h3 class="topic">
+<a name="2j94aku7o57dbtf8ndejea974d">&nbsp;&nbsp;每层神经元与下一层完全连接</a>
+</h3>
+<h3 class="topic">
+<a name="2pme5ps9q135gi14nkibkodsu6">&nbsp;&nbsp;神经元之间不存在同层连接与跨层连接</a>
+</h3>
+<h3 class="topic">
+<a name="4ilgqcqapblvpipqemfcg88ckn">&nbsp;流程</a>
+</h3>
+<h3 class="topic">
+<a name="30581dv9toaikbr8oe8e6b6jl9">&nbsp;&nbsp;输入层接受外界输入</a>
+</h3>
+<h3 class="topic">
+<a name="2tb3vn3oh48ekd8ca5q0j07a90">&nbsp;&nbsp;隐层与输出层对型号加工</a>
+</h3>
+<h3 class="topic">
+<a name="3r01fko5fsgmn4c0cospq4lhqr">&nbsp;原理</a>
+</h3>
+<h3 class="topic">
+<a name="0snfqoj7picubl704hljkh8kgp">&nbsp;&nbsp;训练数据调整神经元的连接权，以及每个神经元的阈值</a>
+</h3>
+<h2 class="topic">
+<a name="3og40o9n7tun0bi6v7ha4peni9">误差逆传播算法</a>
+</h2>
+<h3 class="topic">
+<a name="11klfvd40hb4ivrk1sakik9d2t">&nbsp;目标</a>
+</h3>
+<h3 class="topic">
+<a name="20jiidv7iubql2i1evj152l7nq">&nbsp;&nbsp;更新参数，使得训练出来的网络更好地拟合结果</a>
+</h3>
+<h3 class="topic">
+<a name="1fe7e5vvgpigv145sjvosferg2">&nbsp;流程</a>
+</h3>
+<h3 class="topic">
+<a name="07085dljf3shht7482iqmhq2dj">&nbsp;&nbsp;根据前向传播算出输出神经网络输出</a>
+</h3>
+<h3 class="topic">
+<a name="11sps5faatrdfvia0k44pcdj5q">&nbsp;&nbsp;计算输出和训练例子的均方误差</a>
+</h3>
+<h3 class="topic">
+<a name="06qr4pn6c741rkf5fip7r0am5d">&nbsp;&nbsp;将均方误差对所有参数（权重、阈值）求偏导</a>
+</h3>
+<h3 class="topic">
+<a name="23ifp0nse19lrl3qavb3hf5aps">&nbsp;&nbsp;根据偏导结果和学习率用梯度下降的办法更新参数</a>
+</h3>
+<h2 class="topic">
+<a name="2nf6hnqg0cjkehht6u10sb7eup">全局最小与局部极小</a>
+</h2>
+<h3 class="topic">
+<a name="0mh75pfj3oas81up4u7quau0p1">&nbsp;最优</a>
+</h3>
+<h3 class="topic">
+<a name="4dm5qb9k96akgu7o2ct7d9dgjo">&nbsp;&nbsp;全局</a>
+</h3>
+<h3 class="topic">
+<a name="6nu34eiphlf5jm2bl4ah2om91n">&nbsp;&nbsp;局部</a>
+</h3>
+<h3 class="topic">
+<a name="46vsg9hpqbg8dfqcs9qbv542pv">&nbsp;获得全局最小</a>
+</h3>
+<h3 class="topic">
+<a name="6n71gpu6pg53mdigdps8d593ii">&nbsp;&nbsp;不同初始参数多次初始化神经网络</a>
+</h3>
+<h3 class="topic">
+<a name="26igppvodge8lk755r5jhh0s2f">&nbsp;&nbsp;模拟退火</a>
+</h3>
+<h3 class="topic">
+<a name="00gf7qrp7qb27bs0pv9b445aeo">&nbsp;&nbsp;&nbsp;一定概率接受较差的结果</a>
+</h3>
+<h3 class="topic">
+<a name="1jms2eo8p4apjjeo8ngrtbqmmc">&nbsp;&nbsp;随机梯度下降</a>
+</h3>
+<h3 class="topic">
+<a name="33uqb5bm3fl1t2cnsrl4ecmesv">&nbsp;&nbsp;&nbsp;陷入几部极小点梯度仍可能不为0</a>
+</h3>
+<h2 class="topic">
+<a name="7s3ltfmu2nt0bs7hgbc03thk4b">常见神经网络</a>
+</h2>
+<h3 class="topic">
+<a name="5uj2h36rg30ul8mhj8mggla1d4">&nbsp;RBF网络</a>
+</h3>
+<h3 class="topic">
+<a name="3rrr2p9gpetq05mfhrjukbpptn">&nbsp;&nbsp;类型</a>
+</h3>
+<h3 class="topic">
+<a name="5pmi07qjlnq26vkh5a2gsg3gg3">&nbsp;&nbsp;&nbsp;单隐层前馈</a>
+</h3>
+<h3 class="topic">
+<a name="49lflmtj2s0jt6cv3654810ntk">&nbsp;&nbsp;输入</a>
+</h3>
+<h3 class="topic">
+<a name="75nrhd06t17m4gt66beul8ng1e">&nbsp;&nbsp;&nbsp;向量</a>
+</h3>
+<h3 class="topic">
+<a name="6gknm1gv38d3d5oj9qf6ejujbp">&nbsp;&nbsp;输出</a>
+</h3>
+<h3 class="topic">
+<a name="0dk1ffnkiji5t9f4om6op6qss3">&nbsp;&nbsp;&nbsp;实数</a>
+</h3>
+<h3 class="topic">
+<a name="1j4kjod9vaguvii6anjvmcs9un">&nbsp;&nbsp;步骤</a>
+</h3>
+<h3 class="topic">
+<a name="12v82mmqninbc4bskv9pehvdal">&nbsp;&nbsp;&nbsp;确定神经元中心</a>
+</h3>
+<h3 class="topic">
+<a name="38vc47rs8vfjgdv661rgln5b4h">&nbsp;&nbsp;&nbsp;&nbsp;采样</a>
+</h3>
+<h3 class="topic">
+<a name="5i4hiipojr185jl0s7gca4j53n">&nbsp;&nbsp;&nbsp;&nbsp;聚类</a>
+</h3>
+<h3 class="topic">
+<a name="5o1tu79sa00mmlrjerdqddne32">&nbsp;&nbsp;&nbsp;BP算法确定参数</a>
+</h3>
+<h3 class="topic">
+<a name="0vic1dfcece5ieph2oih59k41d">&nbsp;ATR网络</a>
+</h3>
+<h3 class="topic">
+<a name="15me18e5kosp6j8ngv739p6c3d">&nbsp;&nbsp;类型</a>
+</h3>
+<h3 class="topic">
+<a name="32l73h3d3qorspsmkr8e3ujm9e">&nbsp;&nbsp;&nbsp;竞争型学习</a>
+</h3>
+<h3 class="topic">
+<a name="3d462taa4rmc3lnlsk5t4shqem">&nbsp;&nbsp;&nbsp;&nbsp;每个时刻仅有一个获胜的神经元被激活</a>
+</h3>
+<h3 class="topic">
+<a name="2fsaaf5vqc9glsb0kblefkfksj">&nbsp;&nbsp;组成</a>
+</h3>
+<h3 class="topic">
+<a name="283jce22j9116k521iu7vj0006">&nbsp;&nbsp;&nbsp;比较层</a>
+</h3>
+<h3 class="topic">
+<a name="516kshdnuolijj3858c9jrf7ol">&nbsp;&nbsp;&nbsp;识别层</a>
+</h3>
+<h3 class="topic">
+<a name="3cnuo7sb8vnj3491gvovgsc8b1">&nbsp;&nbsp;&nbsp;识别阈值</a>
+</h3>
+<h3 class="topic">
+<a name="5j7hsh8qf8ju61jn808h3ipg22">&nbsp;&nbsp;&nbsp;重置模块</a>
+</h3>
+<h3 class="topic">
+<a name="2nv27r54l5a719832tqm1vs9h8">&nbsp;&nbsp;特点</a>
+</h3>
+<h3 class="topic">
+<a name="50jh2odft0qi98ektbchjaoc0p">&nbsp;&nbsp;&nbsp;可塑性</a>
+</h3>
+<h3 class="topic">
+<a name="7gu4sbor7ldipjbcl6v4qehcqn">&nbsp;&nbsp;&nbsp;&nbsp;较好的学习新知识的能力</a>
+</h3>
+<h3 class="topic">
+<a name="107le0cq225jglap3p7pu69l2b">&nbsp;&nbsp;&nbsp;稳定性</a>
+</h3>
+<h3 class="topic">
+<a name="5dmaf870uq44u1ak5030srv97m">&nbsp;&nbsp;&nbsp;&nbsp;保持对旧知识的记忆</a>
+</h3>
+<h3 class="topic">
+<a name="5b0ls3usuq4lcioc1uj1b69jdi">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;适用于增量学习</a>
+</h3>
+<h3 class="topic">
+<a name="29bel8n8snqrbd1cea8a7j9kvt">&nbsp;SOM网络</a>
+</h3>
+<h3 class="topic">
+<a name="3r8vrkkb1rk95edhmrcp2cjplb">&nbsp;&nbsp;类型</a>
+</h3>
+<h3 class="topic">
+<a name="4f56edt4bpcv0680a0ofgsg91f">&nbsp;&nbsp;&nbsp;竞争+无监督</a>
+</h3>
+<h3 class="topic">
+<a name="7illu197u7rpe5846aas5kcoa2">&nbsp;&nbsp;输入</a>
+</h3>
+<h3 class="topic">
+<a name="58had94dnokghmavnnu6nrhsgu">&nbsp;&nbsp;&nbsp;高维数据</a>
+</h3>
+<h3 class="topic">
+<a name="7bpn6lcni09d0qfeiu5nm67ng2">&nbsp;&nbsp;输出</a>
+</h3>
+<h3 class="topic">
+<a name="30h9i09qap2maasj4rfgi258rh">&nbsp;&nbsp;&nbsp;低维数据</a>
+</h3>
+<h3 class="topic">
+<a name="6kfbd58mne4friv6ev0kj2tqs6">&nbsp;&nbsp;目标</a>
+</h3>
+<h3 class="topic">
+<a name="4u9kqrk8ikapa89hvcthmcufpm">&nbsp;&nbsp;&nbsp;为每层输出层神经元找到合适的权向量，是的拓扑结构保持</a>
+</h3>
+<h3 class="topic">
+<a name="7vhui2fqfqjeu1ukqool6f6a2c">&nbsp;级联相关网络</a>
+</h3>
+<h3 class="topic">
+<a name="0ec0b3tqu1ljvkcgogn50157vt">&nbsp;&nbsp;结构自适应网络的一种</a>
+</h3>
+<h3 class="topic">
+<a name="33ur7rjq0otp405u4litndsh7n">&nbsp;&nbsp;能够自动改变网络结构</a>
+</h3>
+<h3 class="topic">
+<a name="6fcel2sdgm4lf9ov9kgm843d4n">&nbsp;Elman网络</a>
+</h3>
+<h3 class="topic">
+<a name="08jo489qumid3i9bnf28joe990">&nbsp;&nbsp;能够出现环形结构</a>
+</h3>
+<h3 class="topic">
+<a name="498qa1fa7gusk7t7bu9ghsbii6">&nbsp;Blotzmann机</a>
+</h3>
+<h3 class="topic">
+<a name="2g943tg2kq0ncsqrs1bl633usu">&nbsp;&nbsp;基于能量的模型</a>
+</h3>
+<h2 class="topic">
+<a name="45qiahg8g5mkg8j5v357m3fbrs">深度学习</a>
+</h2>
+<h3 class="topic">
+<a name="0bjm70jkbpqc3gtmbvn5ti9g07">&nbsp;训练方法</a>
+</h3>
+<h3 class="topic">
+<a name="02csqduj4i4mpoa46tnubmbh0f">&nbsp;&nbsp;权共享</a>
+</h3>
+<h3 class="topic">
+<a name="7gnrhijtb334ur6p74tgdpaquo">&nbsp;&nbsp;&nbsp;模型</a>
+</h3>
+<h3 class="topic">
+<a name="22u5ilkt645mn15oo9mumih9ce">&nbsp;&nbsp;&nbsp;&nbsp;卷积神经网络CNN</a>
+</h3>
+<h3 class="topic">
+<a name="1cr57aeri117opm4c755pg6gb3">&nbsp;&nbsp;&nbsp;特点</a>
+</h3>
+<h3 class="topic">
+<a name="21jg74j6khtrs1cvceudfdb50n">&nbsp;&nbsp;&nbsp;&nbsp;分成卷积层与采样层逐步提取信息</a>
+</h3>
+<h3 class="topic">
+<a name="3islsff4edige64sml8g0um2sl">&nbsp;&nbsp;无监督逐层训练</a>
+</h3>
+<h3 class="topic">
+<a name="449j3cvdcc7vs25btm6da4i30a">&nbsp;&nbsp;&nbsp;步骤</a>
+</h3>
+<h3 class="topic">
+<a name="3hp9coikc291nm1lsmeoi9pn96">&nbsp;&nbsp;&nbsp;&nbsp;预训练</a>
+</h3>
+<h3 class="topic">
+<a name="7dglg69ara7n7vkuhi770rvc9i">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每次训练一层结点，上一层的输出作为下一层的输入</a>
+</h3>
+<h3 class="topic">
+<a name="4oaen04c6q5c6r7vi08pftg1rb">&nbsp;&nbsp;&nbsp;&nbsp;微调</a>
+</h3>
+<h3 class="topic">
+<a name="3497l2lob2fflh23pasrnopaku">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bp算法</a>
+</h3>
+<h3 class="topic">
+<a name="69i6itucu78ite1q8d55rkhkau">&nbsp;&nbsp;&nbsp;模型</a>
+</h3>
+<h3 class="topic">
+<a name="1vkp820hust8rldghju5r2qvks">&nbsp;&nbsp;&nbsp;&nbsp;深度信念网络 DBN</a>
+</h3>
+<h3 class="topic">
+<a name="1m5h16p68r08aa2eikljsha2i4">&nbsp;本质</a>
+</h3>
+<h3 class="topic">
+<a name="72imon9664ieek5jc6j9hfhvni">&nbsp;&nbsp;将输入表示为何目标的更加联系紧密的输出</a>
+</h3>
+<h3 class="topic">
+<a name="3slcja2r09tnbvimkgirhe4b2n">&nbsp;&nbsp;将低层特征表示为高层特征</a>
+</h3>
+<h3 class="topic">
+<a name="209juegp0a92jp60kpbvulp16v">&nbsp;&nbsp;自动化进行特征学习，而不需要人的干预</a>
+</h3>
+</body>
+</html>
