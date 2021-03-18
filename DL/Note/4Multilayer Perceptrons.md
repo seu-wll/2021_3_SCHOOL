@@ -63,3 +63,9 @@ if you want use gradient descent, it must be true
 requires_grad=True
 ```
 
+
+
+torch.reshape():
+
+A single dimension may be -1, in which case it’s inferred from the remaining dimensions and the number of elements in `input`.
+
