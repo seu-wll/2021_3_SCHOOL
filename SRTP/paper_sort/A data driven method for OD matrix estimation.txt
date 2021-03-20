@@ -1,0 +1,36 @@
+论文题目：A data driven method for OD matrix estimation
+
+
+
+发表年份：2020
+
+发表会议/期刊：ISTTT
+
+关键词：
+
+Traffic demand
+Origin-destination matrix
+OD matrix estimation
+3D supply patterns
+Data driven
+Principal component analysis
+PCA
+
+研究的问题：
+
+估计基本的完整OD矩阵
+
+使用的模型：
+
+首先是预测每个需求区域的生产和吸引力的时间序列；
+第二种是使用这些预测来估计OD矩阵。
+
+论文的贡献：
+
+实验设计：
+
+
+
+我们将显示这些可以通过使用主成分分析（PCA）直接从数据中得出。
+通过PCA，我们能够找到所谓的“主要” OD流的上限，即那些具有最大动态性的OD流。
+最后，利用这些约束，还可以估计基本的完整OD矩阵。
