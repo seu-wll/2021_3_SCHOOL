@@ -61,3 +61,74 @@ Y = Y.reshape((1, 1, 6, 7))
 convolutional layer output=*feature map*
 
  *receptive field* = all the elements  (from all the previous layers) that may affect the calculation of x
+
+
+
+# 6.3 Padding and Stride
+
+在torch框架下，padding 的值=1意味着上下两边都+1
+
+填充是为了，增加像素量，而不损失过多信息。保证图片输入输出一致，从而更好地预测模型。
+
+卷积核常选为奇数，使得两边填充可以做到一致
+
+步幅：每次移动多少格，处理原始的输入分辨率十分冗余的情况。
+
+
+
+# 6.4  Multiple Input and Multiple Output Channels
+
+通过减少空间分辨率以获得更大的通道深度。直观地说，我们可以将每个通道看作是对不同特征的响应
+
+
+
+卷积核的形状$c_o\times c_i\times k_h\times k_w$
+
+
+
+这种格式要会写：
+
+```python
+def corr2d_multi_in_out(X, K):
+    # 迭代“K”的第0个维度，每次都对输入“X”执行互相关运算。
+    # 最后将所有结果都叠加在一起
+    return torch.stack([corr2d_multi_in(X, k) for k in K], 0)
+```
+
+
+
+1x1的卷积核可以用全连接神经网络表示。
+
+
+
+# 6.5 Pooling
+
+降低卷积层对位置的敏感性，同时降低对空间降采样表示的敏感性
+
+
+
+矩阵合并：（类似刚刚上面的stack）
+
+```
+X = np.concatenate((X, X + 1), 1)
+X
+```
+
+样本输入通道变多在合并的时候是增加第1维上：
+
+```python
+X = np.concatenate((X, X + 1), 1)
+X
+```
+
+但是卷积核要输出多通道的时候是增加在第0维上：
+
+```python
+K = torch.stack((K, K + 1, K + 2), 0)
+K.shape
+```
+
+# 6.6  Convolutional Neural Networks (LeNet)
+
+
+
