@@ -6,7 +6,7 @@
 $$
 \begin{array}{l}
 u(t)=\left\{\begin{array}{ll}
-1, & t>0 \\
+1, & t>=0 \\
 0, & t<0
 \end{array}\right. \\
 x(t) u(t)=\left\{\begin{array}{cl}
